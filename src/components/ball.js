@@ -14,7 +14,7 @@ const Ball = () => {
   const [shake, setShake] = useState(false);
   const [indx, setIndx] = useState(0);
   const texts = ["Test Text 1", "Test Text 2", "Test Text 3", "Test Text 4"];
-  const max_size = 700;
+  const max_size = 600;
   const ball_size = Math.min(max_size, Math.min(height, width));
   const font_size = 16 * (ball_size / max_size);
 
@@ -40,7 +40,7 @@ const Ball = () => {
           className={`${styles.text} ${shake ? styles.hide : ""}`}
           style={{
             fontSize: `${font_size}px`,
-            top: `calc(50% - ${45 * (ball_size / max_size)}px)`,
+            top: `calc(50% - ${40 * (ball_size / max_size)}px)`,
           }}
         >
           {texts[indx]}
