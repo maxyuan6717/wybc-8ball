@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ball.module.css";
 import eightball from "../8ball.png";
 import { useWindowDimensions } from "./windowdimensions";
-import { useEffect } from "react";
 
 const Ball = () => {
-  //   const { height, width } = useWindowDimensions();
-  const height = window.innerHeight;
-  const width = window.innerWidth;
+  const [height, setHeight] = useState();
+  const [width, setWidth] = useState();
+  useEffect(() => {
+    setHeight(window.innerHeight);
+    setWidth(window.innerWidth);
+  }, []);
+
   const [shake, setShake] = useState(false);
   const [indx, setIndx] = useState(0);
   const texts = ["Test Text 1", "Test Text 2", "Test Text 3", "Test Text 4"];
