@@ -3,39 +3,6 @@
   border-radius: 100%;
 }
 
-.circle {
-  display: block;
-  background: black;
-  border-radius: 100%;
-  height: 400px;
-  width: 400px;
-  margin: auto;
-  background: radial-gradient(circle at 33% 33%, #2b2b2b, #000);
-}
-
-.glass {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 225px;
-  height: 225px;
-  background-color: rgb(12, 12, 12);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-  border-left: 102px solid transparent;
-  border-right: 102px solid transparent;
-  border-top: 160px solid rgb(0, 0, 160);
-}
-
 .text {
   position: absolute;
   top: 50%;
