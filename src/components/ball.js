@@ -32,11 +32,10 @@ const Ball = () => {
           style={{ borderRadius: "100%" }}
         />
         <span
-          className={styles.text}
+          className={`${styles.text} ${shake ? styles.hide : ""}`}
           style={{
             fontSize: `${font_size}px`,
             top: `calc(50% - ${45 * (ball_size / max_size)}px)`,
-            display: shake ? "none" : null,
           }}
         >
           {texts[indx]}

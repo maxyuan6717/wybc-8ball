@@ -9,6 +9,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  transition: opacity 0.5s;
+}
+
+.hide {
+  opacity: 0;
 }
 
 .move {
