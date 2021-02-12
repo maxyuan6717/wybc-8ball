@@ -1,6 +1,7 @@
 .container {
   cursor: pointer;
   border-radius: 100%;
+  position: relative;
 }
 
 .text {

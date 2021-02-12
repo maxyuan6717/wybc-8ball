@@ -35,8 +35,7 @@ const Ball = () => {
           className={styles.text}
           style={{
             fontSize: `${font_size}px`,
-            // top: `calc(50% - ${45 * (ball_size / max_size)}px)`,
-            top: "50%",
+            top: `calc(50% - ${45 * (ball_size / max_size)}px)`,
             display: shake ? "none" : null,
           }}
         >
