@@ -9,8 +9,9 @@ const Ball = () => {
   const [shake, setShake] = useState(false);
   const [indx, setIndx] = useState(0);
   const texts = ["Test Text 1", "Test Text 2", "Test Text 3", "Test Text 4"];
-  const ball_size = Math.min(600, Math.min(height, width));
-  const font_size = 16 * (ball_size / 600);
+  const max_size = 700;
+  const ball_size = Math.min(max_size, Math.min(height, width));
+  const font_size = 16 * (ball_size / max_size);
 
   return (
     <>
@@ -24,7 +25,12 @@ const Ball = () => {
           }, 1000);
         }}
       >
-        <img src={eightball} width={ball_size} height={ball_size} />
+        <img
+          src={eightball}
+          width={ball_size}
+          height={ball_size}
+          style={{ borderRadius: "100%" }}
+        />
         <span className={styles.text} style={{ fontSize: `${font_size}px` }}>
           {texts[indx]}
         </span>
