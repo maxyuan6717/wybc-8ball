@@ -31,7 +31,14 @@ const Ball = () => {
           height={ball_size}
           style={{ borderRadius: "100%" }}
         />
-        <span className={styles.text} style={{ fontSize: `${font_size}px` }}>
+        <span
+          className={styles.text}
+          style={{
+            fontSize: `${font_size}px`,
+            top: `${50 - 6 * (ball_size / max_size)}%`,
+            display: shake ? "none" : null,
+          }}
+        >
           {texts[indx]}
         </span>
       </div>
