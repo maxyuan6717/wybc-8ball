@@ -21,15 +21,6 @@ const Ball = () => {
           }, 1000);
         }}
       >
-        {/* <section className={styles.stage}>
-          <figure className={styles.ball}>
-            <span className={styles.shadow} />
-            <span className={styles.eight} />
-          </figure>
-    </section> */}
-        {/* <figure className={styles.circle} /> */}
-        {/* <figure className={styles.glass} />
-        <figure className={styles.triangle} /> */}
         <img src={eightball} width={size} height={size} />
         <span className={styles.text}>{texts[indx]}</span>
       </div>
