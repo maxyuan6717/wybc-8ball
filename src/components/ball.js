@@ -30,10 +30,12 @@ const Ball = () => {
           setTimeout(() => {
             setShake(false);
             setIndx((indx + 1) % images.length);
-            if (indx === 4) {
-              window.location.href = pdf;
-            }
           }, 800);
+          if (indx === 3) {
+            setTimeout(() => {
+              window.location.href = pdf;
+            }, 2000);
+          }
         }}
         style={{ borderRadius: "100%" }}
       >
