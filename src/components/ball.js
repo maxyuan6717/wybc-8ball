@@ -39,7 +39,7 @@ const Ball = () => {
           src={images[indx]}
           width={ball_size}
           height={ball_size}
-          style={{ borderRadius: "100%" }}
+          //   style={{ borderRadius: "100%" }}
         />
         {/* <span
           className={`${styles.text} ${shake ? styles.hide : ""}`}
