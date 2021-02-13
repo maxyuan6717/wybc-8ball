@@ -20,6 +20,8 @@ const Ball = () => {
   const max_size = 550;
   const ball_size = Math.min(max_size, Math.min(height, width));
   const images = [ball0, ball1, ball2, ball3, ball4];
+  const pdf_url =
+    "https://view.publitas.com/06dc38bd-ddf6-446a-8e0a-a428e2886be0/magazine/page/1";
 
   return (
     <>
@@ -33,7 +35,7 @@ const Ball = () => {
           }, 800);
           if (indx === 3) {
             setTimeout(() => {
-              window.location.href = pdf;
+              window.location.href = pdf_url;
             }, 2000);
           }
         }}
@@ -43,7 +45,7 @@ const Ball = () => {
           src={images[indx]}
           width={ball_size}
           height={ball_size}
-          style={{ borderRadius: "100%" }}
+          style={{ borderRadius: "100%", margin: "10px" }}
         />
       </div>
     </>
