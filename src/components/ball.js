@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./ball.module.css";
 import eightball from "../8ball.png";
 import { useWindowDimensions } from "./windowdimensions";
+import ball1 from "../crystal1.png";
+import ball2 from "../crystal2.png";
+import ball3 from "../crystal3.png";
+import ball4 from "../crystal4.png";
 
 const Ball = () => {
   const [height, setHeight] = useState();
@@ -17,6 +21,7 @@ const Ball = () => {
   const max_size = 600;
   const ball_size = Math.min(max_size, Math.min(height, width));
   const font_size = 16 * (ball_size / max_size);
+  const images = [ball1, ball2, ball3, ball4];
 
   return (
     <>
@@ -27,16 +32,16 @@ const Ball = () => {
           setTimeout(() => {
             setShake(false);
             setIndx((indx + 1) % texts.length);
-          }, 1000);
+          }, 800);
         }}
       >
         <img
-          src={eightball}
+          src={images[indx]}
           width={ball_size}
           height={ball_size}
           style={{ borderRadius: "100%" }}
         />
-        <span
+        {/* <span
           className={`${styles.text} ${shake ? styles.hide : ""}`}
           style={{
             fontSize: `${font_size}px`,
@@ -44,7 +49,7 @@ const Ball = () => {
           }}
         >
           {texts[indx]}
-        </span>
+        </span> */}
       </div>
     </>
   );
