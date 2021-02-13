@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ball.module.css";
-import eightball from "../8ball.png";
-import { useWindowDimensions } from "./windowdimensions";
-import ball1 from "../crystal1.png";
-import ball2 from "../crystal2.png";
-import ball3 from "../crystal3.png";
-import ball4 from "../crystal4.png";
+import ball0 from "../assets/ball0.png";
+import ball1 from "../assets/ball1.png";
+import ball2 from "../assets/ball2.png";
+import ball3 from "../assets/ball3.png";
+import ball4 from "../assets/ball4.png";
+import pdf from "../assets/magazine.pdf";
 
 const Ball = () => {
   const [height, setHeight] = useState();
@@ -17,11 +17,9 @@ const Ball = () => {
 
   const [shake, setShake] = useState(false);
   const [indx, setIndx] = useState(0);
-  const texts = ["Test Text 1", "Test Text 2", "Test Text 3", "Test Text 4"];
-  const max_size = 600;
+  const max_size = 550;
   const ball_size = Math.min(max_size, Math.min(height, width));
-  const font_size = 16 * (ball_size / max_size);
-  const images = [ball1, ball2, ball3, ball4];
+  const images = [ball0, ball1, ball2, ball3, ball4];
 
   return (
     <>
@@ -31,25 +29,20 @@ const Ball = () => {
           setShake(true);
           setTimeout(() => {
             setShake(false);
-            setIndx((indx + 1) % texts.length);
+            setIndx((indx + 1) % images.length);
+            if (indx === 4) {
+              window.location.href = pdf;
+            }
           }, 800);
         }}
+        style={{ borderRadius: "100%" }}
       >
         <img
           src={images[indx]}
           width={ball_size}
           height={ball_size}
-          //   style={{ borderRadius: "100%" }}
+          style={{ borderRadius: "100%" }}
         />
-        {/* <span
-          className={`${styles.text} ${shake ? styles.hide : ""}`}
-          style={{
-            fontSize: `${font_size}px`,
-            top: `calc(50% - ${40 * (ball_size / max_size)}px)`,
-          }}
-        >
-          {texts[indx]}
-        </span> */}
       </div>
     </>
   );
