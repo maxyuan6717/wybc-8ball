@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./ball.module.css";
 import ball0 from "../assets/ball0.png";
 import ball1 from "../assets/ball1.png";
 import ball2 from "../assets/ball2.png";
 import ball3 from "../assets/ball3.png";
 import ball4 from "../assets/ball4.png";
-import pdf from "../assets/magazine.pdf";
 
 const Ball = () => {
+  const history = useHistory();
   const [height, setHeight] = useState();
   const [width, setWidth] = useState();
   useEffect(() => {
@@ -24,7 +25,7 @@ const Ball = () => {
     "https://view.publitas.com/dc9e368e-f7d1-4b07-9d86-67fb50b35376/rdbnpng-27-oracle/page/1";
 
   return (
-    <>
+    <div className={styles.background}>
       <div
         className={`m-auto ${styles.container} ${shake ? styles.move : ""}`}
         onClick={() => {
@@ -35,7 +36,8 @@ const Ball = () => {
           }, 800);
           if (indx === 3) {
             setTimeout(() => {
-              window.location.href = pdf_url;
+              // window.location.href = pdf_url;
+              history.push("/issue");
             }, 2000);
           }
         }}
@@ -48,7 +50,7 @@ const Ball = () => {
           style={{ borderRadius: "100%", margin: "10px" }}
         />
       </div>
-    </>
+    </div>
   );
 };
 

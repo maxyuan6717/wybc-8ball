@@ -1,0 +1,27 @@
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+
+.doc_container {
+  /* border: 2px solid black; */
+  box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  z-index: 69;
+  cursor: pointer;
+  color: rgb(179, 179, 179);
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  color: rgb(85, 85, 85);
+  transform: scale(1.2);
+}
+
+.disabled {
+  pointer-events: none;
+  color: rgb(238, 238, 238) !important;
+}
