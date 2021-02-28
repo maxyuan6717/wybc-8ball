@@ -68,7 +68,7 @@ const Issue = () => {
                     src={images[pageNumber - 2]}
                     height={!isMobile ? `${height * 0.85}px` : null}
                     width={
-                      !isMobile ? null : `${width * 0.95 - arrow_size * 2}px`
+                      !isMobile ? null : `${width * 0.9 - arrow_size * 2}px`
                     }
                   />
                 )}
@@ -77,7 +77,7 @@ const Issue = () => {
                     src={images[pageNumber - 1]}
                     height={!isMobile ? `${height * 0.85}px` : null}
                     width={
-                      !isMobile ? null : `${width * 0.95 - arrow_size * 2}px`
+                      !isMobile ? null : `${width * 0.9 - arrow_size * 2}px`
                     }
                   />
                 )}
