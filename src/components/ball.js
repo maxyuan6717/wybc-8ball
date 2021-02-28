@@ -21,7 +21,7 @@ const Ball = () => {
   const ball_size = Math.min(max_size, Math.min(height, width));
   const images = [ball0, ball1, ball2, ball3, ball4];
   const pdf_url =
-    "https://view.publitas.com/06dc38bd-ddf6-446a-8e0a-a428e2886be0/magazine/page/1";
+    "https://view.publitas.com/dc9e368e-f7d1-4b07-9d86-67fb50b35376/rdbnpng-27-oracle/page/1";
 
   return (
     <>
